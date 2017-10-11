@@ -58,7 +58,7 @@ else
 fi
 
 if [ $(( $(date +%s) - $LASTBACKUP )) -lt $((60*60*$MAXH)) ]; then
-	# Exit as last backup is too recent
+	# Exit as last backup is too recent.
 	[[ "$DEBUG" ]] && echo "LAST BACKUP DATE: $(date -d @$LASTBACKUP +'%F %T'), SKIPPING" >>$LOG
 	exit 0
 else
